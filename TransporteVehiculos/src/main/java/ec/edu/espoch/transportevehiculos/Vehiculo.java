@@ -20,7 +20,7 @@ public abstract class Vehiculo implements DaoVehiculo {
     }
 
   
-    public double getVelocidad() {
+    public float getVelocidad() {
         return Velocidad;
     }
 
@@ -28,7 +28,7 @@ public abstract class Vehiculo implements DaoVehiculo {
         this.Velocidad = Velocidad;
     }
 
-    public double getTiempo() {
+    public float getTiempo() {
         return Tiempo;
     }
 
@@ -36,7 +36,7 @@ public abstract class Vehiculo implements DaoVehiculo {
         this.Tiempo = Tiempo;
     }
 
-    public double getEficiencia() {
+    public float getEficiencia() {
         return Eficiencia;
     }
 
@@ -46,18 +46,22 @@ public abstract class Vehiculo implements DaoVehiculo {
   
   
     // Sobrecarga de métodos
-    public double calcularDistancia(float velocidad) {
+  @Override
+    public float calcularDistancia(float velocidad) {
         return velocidad * 1;
     }
 
-    public double calcularDistancia(float velocidad, float tiempo) {
+  @Override
+    public float calcularDistancia(float velocidad, float tiempo) {
         return velocidad * tiempo;
     }
 
-    public double calcularDistancia(float velocidad, float tiempo, float eficiencia) {
+  @Override
+    public float calcularDistancia(float velocidad, float tiempo, float eficiencia) {
         return velocidad * tiempo * eficiencia;
     }
 
     // Método abstracto
+  @Override
     public abstract void transportar();
 }

@@ -16,14 +16,14 @@ public class TransporteVehiculos {
         System.out.println("Transporte de productos");
     
         carro.transportar();  
-        System.out.println("Distancia del Carro: " + carro.calcularDistancia((float) carro.getVelocidad())+ "km/h");
+        System.out.println("Distancia del Carro: " + carro.calcularDistancia((float) carro.getVelocidad())+ "km");
         
             
         moto.transportar();
-        System.out.println("Distancia de la Moto: " + moto.calcularDistancia((float) moto.getTiempo())+ "km/h");
+        System.out.println("Distancia de la Moto: " + moto.calcularDistancia((float) moto.getTiempo())+ "km");
         
         avion.transportar(); 
-        System.out.println("Distancia del Avion: " + avion.calcularDistancia((float) avion.getEficiencia())+ "km/h");
+        System.out.println("Distancia del Avion: " + avion.calcularDistancia((float) avion.getEficiencia())+ "km");
         
                 
     }

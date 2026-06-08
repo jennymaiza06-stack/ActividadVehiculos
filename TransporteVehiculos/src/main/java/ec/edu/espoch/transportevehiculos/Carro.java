@@ -15,7 +15,6 @@ public class Carro extends Vehiculo implements DaoVehiculo {
         super(Velocidad, Tiempo, Eficiencia);
     }
 
-
     
 
     @Override
