@@ -4,8 +4,17 @@
  */
 package ec.edu.espoch.transportevehiculos;
 
+import TransporteDao.DaoVehiculo;
 
-public class Avion extends Vehiculo {
+
+public class Avion extends Vehiculo implements DaoVehiculo {
+
+    public Avion() {
+    }
+
+    public Avion(float Velocidad, float Tiempo, float Eficiencia) {
+        super(Velocidad, Tiempo, Eficiencia);
+    }
     
     @Override
     public void transportar() {

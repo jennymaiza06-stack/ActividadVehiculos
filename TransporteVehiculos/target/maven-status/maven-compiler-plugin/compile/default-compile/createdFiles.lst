@@ -1,5 +1,6 @@
 ec\edu\espoch\transportevehiculos\TransporteVehiculos.class
 ec\edu\espoch\transportevehiculos\Vehiculo.class
+TransporteDao\DaoVehiculo.class
 ec\edu\espoch\transportevehiculos\Avion.class
 ec\edu\espoch\transportevehiculos\Moto.class
 ec\edu\espoch\transportevehiculos\Carro.class

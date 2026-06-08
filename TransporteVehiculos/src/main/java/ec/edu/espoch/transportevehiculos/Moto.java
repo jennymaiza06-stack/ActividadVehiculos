@@ -4,8 +4,17 @@
  */
 package ec.edu.espoch.transportevehiculos;
 
-public class Moto extends Vehiculo {
+import TransporteDao.DaoVehiculo;
 
+public class Moto extends Vehiculo implements DaoVehiculo {
+
+   
+    public Moto(float Velocidad, float Tiempo, float Eficiencia) {
+        super(Velocidad, Tiempo, Eficiencia);
+    }
+
+
+    
     @Override
     public void transportar() {
         System.out.println("La moto transporta productos pequeños rápidamente en áreas urbanas.");

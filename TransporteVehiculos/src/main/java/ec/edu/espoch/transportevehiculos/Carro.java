@@ -4,7 +4,18 @@
  */
 package ec.edu.espoch.transportevehiculos;
 
-public class Carro extends Vehiculo {
+import TransporteDao.DaoVehiculo;
+
+public class Carro extends Vehiculo implements DaoVehiculo {
+
+    public Carro() {
+    }
+
+    public Carro(float Velocidad, float Tiempo, float Eficiencia) {
+        super(Velocidad, Tiempo, Eficiencia);
+    }
+
+
     
 
     @Override

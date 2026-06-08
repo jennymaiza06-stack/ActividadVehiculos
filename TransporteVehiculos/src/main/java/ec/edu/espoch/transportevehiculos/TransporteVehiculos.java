@@ -9,21 +9,21 @@ public class TransporteVehiculos {
 
     public static void main(String[] args) {
     
-        Vehiculo carro = new Carro();
-        Vehiculo moto = new Moto();
-        Vehiculo  avion = new Avion();
+        Vehiculo carro = new Carro(10,4,9);
+        Vehiculo moto = new Moto(2,6,8);
+        Vehiculo  avion = new Avion(57,8,91);
 
         System.out.println("Transporte de productos");
     
         carro.transportar();  
-        System.out.println("Distancia del Carro: " + carro.calcularDistancia(80)+ "km/h");
+        System.out.println("Distancia del Carro: " + carro.calcularDistancia((float) carro.getVelocidad())+ "km/h");
         
             
         moto.transportar();
-        System.out.println("Distancia de la Moto: " + moto.calcularDistancia(80, 3)+ "km/h");
+        System.out.println("Distancia de la Moto: " + moto.calcularDistancia((float) moto.getTiempo())+ "km/h");
         
         avion.transportar(); 
-        System.out.println("Distancia del Avion: " + avion.calcularDistancia(80, 3, 0.95)+ "km/h");
+        System.out.println("Distancia del Avion: " + avion.calcularDistancia((float) avion.getEficiencia())+ "km/h");
         
                 
     }
