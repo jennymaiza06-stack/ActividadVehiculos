@@ -1,0 +1,7 @@
+ec\edu\espoch\proyectointegrador\modelo\Funcion.class
+ec\edu\espoch\proyectointegrador\modelo\Limite.class
+ec\edu\espoch\proyectointegrador\modelo\Operacion.class
+ec\edu\espoch\proyectointegrador\dao\Operaciones.class
+ec\edu\espoch\proyectointegrador\modelo\ProcesoLimite.class
+ec\edu\espoch\proyectointegrador\dao\GestorLimites.class
+ec\edu\espoch\proyectointegrador\ProyectoIntegrador.class
