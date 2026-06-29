@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.calculadoramini.controller.interfaces.ControllerInterface">
+    <stylesheets>
+        <URL value="@/styles/interfaceCalculadora.css" />
+    </stylesheets>
+
+    <children>
+        <Label alignment="CENTER" styleClass="title-label" text="Calculadora Mini" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="40.0" />
+
+        <TextField fx:id="txtNumero1" promptText="Primer número" styleClass="minimal-text-field" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="110.0" />
+
+        <TextField fx:id="txtNumero2" promptText="Segundo número" styleClass="minimal-text-field" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="170.0" />
+
+        <Button fx:id="btnSumar" onAction="#handleSumar" styleClass="minimal-button" text="Calcular Suma" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="250.0" />
+
+        <Label fx:id="lblResultado" alignment="CENTER" styleClass="result-label" text="—" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="310.0" />
+    </children>
+</AnchorPane>

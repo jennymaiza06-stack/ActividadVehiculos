@@ -1,0 +1,285 @@
+/* ===== FONDO (negro mate + resplandor carmesi) ===== */
+.fondo {
+    -fx-background-color:
+        linear-gradient(to bottom right, #0d0d10, #060607),
+        radial-gradient(center 25% 0%, radius 90%, rgba(225,29,72,0.14), transparent 58%);
+}
+
+/* ===== ENCABEZADO ===== */
+.encabezado {
+    -fx-background-color: linear-gradient(to right, rgba(225,29,72,0.12), transparent);
+    -fx-border-color: transparent transparent rgba(225,29,72,0.35) transparent;
+    -fx-border-width: 0 0 1.5 0;
+}
+
+.logo {
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.22), 10, 0, 0, 0);
+}
+
+.titulo {
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(to right, #fb7185, #e11d48);
+    -fx-effect: dropshadow(gaussian, rgba(225,29,72,0.50), 16, 0, 0, 0);
+}
+
+.navTexto {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6b6b72;
+}
+
+/* ===== PANELES (negro mate, borde carmesi arriba) ===== */
+.panel {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(225,29,72,0.50), rgba(120,30,50,0.15) 45%, rgba(40,30,35,0.22)),
+        linear-gradient(to bottom, #151417, #100f12);
+    -fx-background-insets: 0, 1.2;
+    -fx-background-radius: 14, 13;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.55), 20, 0, 0, 7);
+}
+
+.panelResultado {
+    -fx-padding: 8 16 8 16;
+}
+
+.panelTitulo {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fb7185;
+}
+
+/* ===== ETIQUETAS ===== */
+.etiqueta {
+    -fx-font-size: 12px;
+    -fx-text-fill: #a1a1aa;
+}
+
+.etiquetaFlecha {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fb7185;
+    -fx-effect: dropshadow(gaussian, rgba(225,29,72,0.45), 8, 0, 0, 0);
+}
+
+/* ===== CAMPOS DE TEXTO ===== */
+.campo {
+    -fx-pref-height: 38px;
+    -fx-font-size: 13px;
+    -fx-background-color: #0a0a0c;
+    -fx-text-fill: #ededf0;
+    -fx-prompt-text-fill: #55555c;
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(225,29,72,0.20);
+    -fx-border-radius: 8;
+    -fx-border-width: 1.2;
+    -fx-padding: 0 10 0 10;
+}
+
+.campo:focused {
+    -fx-border-color: #e11d48;
+    -fx-effect: dropshadow(gaussian, rgba(225,29,72,0.45), 14, 0, 0, 0);
+}
+
+/* ===== BOTONES DE AYUDA ===== */
+.botonAyuda {
+    -fx-pref-height: 30px;
+    -fx-font-size: 11px;
+    -fx-text-fill: #d4d4d8;
+    -fx-background-color: linear-gradient(to bottom, #1f1d20, #161417);
+    -fx-background-radius: 7;
+    -fx-border-color: rgba(225,29,72,0.18);
+    -fx-border-radius: 7;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+.botonAyuda:hover {
+    -fx-background-color: linear-gradient(to bottom, #2a262a, #1d1a1e);
+    -fx-border-color: rgba(225,29,72,0.55);
+}
+
+/* ===== BOTON PRINCIPAL (carmesi + resplandor) ===== */
+.botonPrincipal {
+    -fx-pref-height: 44px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff5f7;
+    -fx-background-color: linear-gradient(to bottom right, #f43f5e, #b91c1c);
+    -fx-background-radius: 9;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(225,29,72,0.55), 18, 0, 0, 4);
+}
+.botonPrincipal:hover {
+    -fx-background-color: linear-gradient(to bottom right, #fb7185, #dc2626);
+    -fx-effect: dropshadow(gaussian, rgba(225,29,72,0.85), 24, 0, 0, 5);
+}
+
+/* ===== RESULTADO (verde, el unico color que rompe) ===== */
+.resultado {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34d399;
+    -fx-effect: dropshadow(gaussian, rgba(52,211,153,0.50), 12, 0, 0, 0);
+}
+
+/* ===== AREA DE PROCEDIMIENTO (consola) ===== */
+.areaTexto {
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 13px;
+}
+.areaTexto, .areaTexto .content {
+    -fx-background-color: #08080a;
+    -fx-text-fill: #d4d4d8;
+    -fx-background-radius: 7;
+}
+
+/* ===== BOTONES SECUNDARIOS ===== */
+.botonSecundario {
+    -fx-pref-height: 34px;
+    -fx-font-size: 12px;
+    -fx-text-fill: #a1a1aa;
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(225,29,72,0.22);
+    -fx-border-radius: 7;
+    -fx-background-radius: 7;
+    -fx-cursor: hand;
+}
+.botonSecundario:hover {
+    -fx-background-color: rgba(225,29,72,0.12);
+    -fx-border-color: rgba(225,29,72,0.50);
+    -fx-text-fill: #ededf0;
+}
+
+/* ===== MENU HISTORIAL ===== */
+.context-menu {
+    -fx-background-color: #100f12;
+    -fx-border-color: rgba(225,29,72,0.32);
+    -fx-border-width: 1.2;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 4;
+}
+.menu-item {
+    -fx-padding: 6 12 6 12;
+}
+.menu-item .label {
+    -fx-text-fill: #d4d4d8;
+    -fx-font-size: 12px;
+}
+.menu-item:focused {
+    -fx-background-color: rgba(225,29,72,0.20);
+    -fx-background-radius: 6;
+}
+
+/* ===== BARRAS DE DESPLAZAMIENTO ===== */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical .thumb, .scroll-bar:horizontal .thumb {
+    -fx-background-color: #3a3a3e;
+    -fx-background-radius: 6;
+}
+.scroll-bar:vertical .thumb:hover, .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #57575c;
+}
+.scroll-bar .increment-button, .scroll-bar .decrement-button,
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* ===== GRAFICA (curva carmesi con degradado + brillo) ===== */
+.chart {
+    -fx-background-color: transparent;
+}
+.chart-plot-background {
+    -fx-background-color: linear-gradient(to bottom, #0d0c0e, #08080a);
+}
+.chart-vertical-grid-lines, .chart-horizontal-grid-lines {
+    -fx-stroke: rgba(255,255,255,0.06);
+}
+.axis {
+    -fx-tick-label-fill: #a1a1aa;
+}
+.axis-label {
+    -fx-text-fill: #a1a1aa;
+}
+
+/* curva principal: degradado de 3 tonos + resplandor mas marcado */
+.default-color0.chart-series-line {
+    -fx-stroke: linear-gradient(to right, #ffe4e6, #fb7185, #be123c);
+    -fx-stroke-width: 2.5px;
+    -fx-effect: dropshadow(gaussian, rgba(225,29,72,0.65), 16, 0, 0, 0);
+}
+
+/* quitar los puntitos de cada muestra de la curva, dejar solo la linea lisa */
+.default-color0.chart-line-symbol {
+    -fx-background-color: #f4f4f5;
+    -fx-background-radius: 3px;
+    -fx-padding: 3px;
+    -fx-effect: dropshadow(gaussian, rgba(244,244,245,0.85), 9, 0, 0, 0);
+}
+
+/* punto destacado del limite */
+.default-color1.chart-series-line {
+    -fx-stroke: transparent;
+}
+/* estilo fijo para CUALQUIER rama de la curva, sin importar el indice que le toque */
+.rama-curva.chart-series-line {
+    -fx-stroke: linear-gradient(to right, #ffe4e6, #fb7185, #be123c);
+    -fx-stroke-width: 2.5px;
+    -fx-effect: dropshadow(gaussian, rgba(225,29,72,0.65), 16, 0, 0, 0);
+}
+.rama-curva.chart-line-symbol {
+    -fx-background-color: #f4f4f5;
+    -fx-background-radius: 3px;
+    -fx-padding: 3px;
+    -fx-effect: dropshadow(gaussian, rgba(244,244,245,0.85), 9, 0, 0, 0);
+}
+
+/* estilo fijo para el punto del limite, sin importar el indice que le toque */
+.punto-limite.chart-series-line {
+    -fx-stroke: transparent;
+}
+.punto-limite.chart-line-symbol {
+    -fx-background-color: #ffffff, #22c55e;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(34,197,94,0.85), 16, 0, 0, 0);
+}
+.default-color1.chart-line-symbol {
+    -fx-background-color: #ffffff, #22c55e;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(34,197,94,0.85), 16, 0, 0, 0);
+}
+.default-color1.chart-line-symbol:hover {
+    -fx-background-color: #ffffff, #4ade80;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 11px;
+    -fx-padding: 11px;
+    -fx-effect: dropshadow(gaussian, rgba(74,222,128,0.95), 22, 0, 0, 0);
+    -fx-cursor: hand;
+    
+}
+
+
+/* leyenda */
+.chart-legend {
+    -fx-background-color: transparent;
+}
+.chart-legend-item {
+    -fx-text-fill: #d4d4d8;
+    -fx-font-size: 11px;
+}
+.navMarca {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f4f4f5;
+}
+.navSeparador {
+    -fx-font-size: 12px;
+    -fx-text-fill: #e11d48;
+}

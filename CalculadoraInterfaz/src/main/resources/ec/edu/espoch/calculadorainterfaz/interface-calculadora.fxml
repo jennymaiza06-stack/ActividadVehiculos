@@ -1,0 +1,56 @@
+package paquete;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
+public class Controlador {
+
+    @FXML
+    private TextField txtNumero1;
+
+    @FXML
+    private TextField txtNumero2;
+
+    @FXML
+    private Label lblResultado;
+
+    private double n1, n2;
+
+    private boolean validar() {
+        try {
+            n1 = Double.parseDouble(txtNumero1.getText());
+            n2 = Double.parseDouble(txtNumero2.getText());
+            return true;
+        } catch (Exception e) {
+            lblResultado.setText("Error: ingrese números válidos");
+            return false;
+        }
+    }
+
+    @FXML
+    private void sumar() {
+        if (validar()) lblResultado.setText(String.valueOf(n1 + n2));
+    }
+
+    @FXML
+    private void restar() {
+        if (validar()) lblResultado.setText(String.valueOf(n1 - n2));
+    }
+
+    @FXML
+    private void multiplicar() {
+        if (validar()) lblResultado.setText(String.valueOf(n1 * n2));
+    }
+
+    @FXML
+    private void dividir() {
+        if (validar()) {
+            if (n2 == 0) {
+                lblResultado.setText("No se puede dividir para 0");
+            } else {
+                lblResultado.setText(String.valueOf(n1 / n2));
+            }
+        }
+    }
+}

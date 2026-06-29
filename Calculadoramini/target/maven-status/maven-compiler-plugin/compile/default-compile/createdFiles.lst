@@ -1,0 +1,7 @@
+com\mycompany\calculadoramini\model\data\Calculadoras.class
+module-info.class
+com\mycompany\calculadoramini\App.class
+com\mycompany\calculadoramini\controller\interfaces\ControllerInterface.class
+com\mycompany\calculadoramini\model\object\Calculadora.class
+com\mycompany\calculadoramini\controller\model\ControllerModel.class
+com\mycompany\calculadoramini\model\access\InterCalculadora.class

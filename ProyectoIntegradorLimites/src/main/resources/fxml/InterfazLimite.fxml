@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="750.0" prefWidth="1300.0" styleClass="fondo"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ec.edu.espoch.proyectointegrador.Controller.Interfaces.Vista">
+
+    <stylesheets>
+        <URL value="@/styles/interfazlimite.css"/>
+    </stylesheets>
+
+    <top>
+        <HBox styleClass="encabezado" spacing="14" alignment="CENTER_LEFT">
+            <padding><Insets top="14" right="24" bottom="14" left="24"/></padding>
+            <ImageView fitHeight="46.0" fitWidth="46.0" preserveRatio="true" styleClass="logo">
+                <image>
+                    <Image url="@/images/espoch.png"/>
+                </image>
+            </ImageView>
+            <Label text="Calculadora de Límites" styleClass="titulo"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <HBox spacing="16" alignment="CENTER_RIGHT">
+    <Label text="ESPOCH" styleClass="navMarca"/>
+    <Label text="—" styleClass="navSeparador"/>
+    <Label text="Exponencial · Logarítmico · Trigonométrico · Radical" styleClass="navTexto"/>
+</HBox>
+        </HBox>
+    </top>
+
+    <center>
+        <HBox spacing="16">
+            <padding><Insets top="0" right="16" bottom="16" left="16"/></padding>
+
+            <VBox spacing="14" prefWidth="430.0" maxWidth="430.0">
+
+                <VBox styleClass="panel" spacing="10">
+                    <Label text="Entrada" styleClass="panelTitulo"/>
+                    <Label text="Lim f(x) =" styleClass="etiqueta"/>
+                    <TextField fx:id="campoExpresion" promptText="Ej: (x^2-4)/(x-2)" styleClass="campo"/>
+
+                    <HBox spacing="8" alignment="CENTER_LEFT">
+                        <Label text="x →" styleClass="etiquetaFlecha"/>
+                        <TextField fx:id="campoValorX" promptText="Ej: 2" styleClass="campo" prefWidth="80.0"/>
+                    </HBox>
+
+                    <HBox spacing="6">
+                        <Button text="Raíz" styleClass="botonAyuda" onAction="#onInsertarRaiz"/>
+                        <Button text="^" styleClass="botonAyuda" onAction="#onInsertarPotencia"/>
+                        <Button text="Fracción" styleClass="botonAyuda" onAction="#onInsertarFraccion"/>
+                        <Button text="sen" styleClass="botonAyuda" onAction="#onInsertarSeno"/>
+                        <Button text="cos" styleClass="botonAyuda" onAction="#onInsertarCoseno"/>
+                    </HBox>
+                    <HBox spacing="6">
+                        <Button text="tan" styleClass="botonAyuda" onAction="#onInsertarTangente"/>
+                        <Button text="ln" styleClass="botonAyuda" onAction="#onInsertarLn"/>
+                        <Button text="log" styleClass="botonAyuda" onAction="#onInsertarLog"/>
+                        <Button text="( )( )" styleClass="botonAyuda" onAction="#onInsertarParentesisDoble"/>
+                        <Button text="( )" styleClass="botonAyuda" onAction="#onInsertarParentesis"/>
+                    </HBox>
+
+                    <Button text="Calcular Límite" styleClass="botonPrincipal" maxWidth="Infinity" onAction="#onCalcular"/>
+                </VBox>
+
+                <VBox styleClass="panel" spacing="8" VBox.vgrow="ALWAYS">
+                    <Label text="Procedimiento" styleClass="panelTitulo"/>
+                    <TextArea fx:id="areaProcedimiento" editable="false" styleClass="areaTexto" VBox.vgrow="ALWAYS"/>
+                </VBox>
+
+                <VBox styleClass="panel panelResultado" spacing="4" maxHeight="64.0">
+                    <Label text="Resultado" styleClass="panelTitulo"/>
+                    <Label fx:id="lblResultado" text="Esperando cálculo..." styleClass="resultado"/>
+                </VBox>
+
+                <HBox spacing="10">
+                    <Button fx:id="botonVerHistorial" text="Ver Historial" styleClass="botonSecundario" onAction="#onVerHistorial"/>
+                    <Button text="Salir" styleClass="botonSecundario" onAction="#onSalir"/>
+                </HBox>
+
+            </VBox>
+
+            <VBox styleClass="panel" spacing="10" HBox.hgrow="ALWAYS">
+                <Label text="Visualización gráfica" styleClass="panelTitulo"/>
+                <LineChart fx:id="graficoLimite" legendVisible="true" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                        <NumberAxis label="x"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="f(x)"/>
+                    </yAxis>
+                </LineChart>
+            </VBox>
+
+        </HBox>
+    </center>
+
+</BorderPane>
